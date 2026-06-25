@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Промик Булашева Владислава 3-МД-15</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style id="sections-styles">
+.header {
+    padding: 30px 0;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .nav {
+    display: flex;
+    gap: 40px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .login-link {
+    font-weight: 500;
+  }
+  .header-btn {
+    padding: 15px 30px;
+  }
+.hero {
+    padding: 80px 0 150px;
+  }
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .hero-content {
+    flex: 1;
+    max-width: 750px;
+  }
+  .hero-title {
+    font-size: 72px;
+    line-height: 1.1;
+    margin: 0 0 30px;
+    font-weight: 700;
+  }
+  .hero-desc {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    max-width: 600px;
+  }
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-btn {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
+  .how-it-works-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #222222;
+    font-weight: 500;
+  }
+  .how-it-works-graphics {
+    position: relative;
+    width: 186px;
+    height: 20px;
+  }
+  .hw-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .hw-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+.how-it-works {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 100px 0;
+  }
+  .hw-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 80px;
+  }
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .title-wrapper h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+  }
+  .stats {
+    color: var(--bg-main);
+    font-size: 18px;
+    margin: 0;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    position: relative;
+  }
+  .steps-grid::before, .steps-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #000000;
+  }
+  .steps-grid::before { left: 33.33%; }
+  .steps-grid::after { left: 66.66%; }
+  .step-card {
+    padding-right: 40px;
+  }
+  .step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .step-number {
+    font-size: 116px;
+    font-weight: 700;
+    color: var(--primary-green);
+    line-height: 1;
+  }
+  .step-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .step-title {
+    font-size: 24px;
+    color: var(--bg-main);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .step-desc {
+    font-size: 16px;
+    color: var(--bg-main);
+    line-height: 1.5;
+    margin: 0;
+  }
+.features {
+    padding: 120px 0;
+  }
+  .features-header {
+    margin-bottom: 60px;
+  }
+  .features-header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .features-box {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feature-item {
+    padding: 50px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+  .feature-item:nth-child(3n) {
+    border-right: none;
+  }
+  .feature-item:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+  .feature-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .feature-number {
+    font-size: 18px;
+    color: var(--text-gray);
+  }
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .feature-title {
+    font-size: 32px;
+    color: var(--primary-orange);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .feature-desc {
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin: 0;
+  }
+.testimonials {
+    background: linear-gradient(135deg, #14af87 0%, #7191f6 100%);
+    padding: 100px 0;
+  }
+  .testimonials-header {
+    margin-bottom: 60px;
+  }
+  .testimonials-header h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .testimonial-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0 0 30px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .author-avatar {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+  }
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .author-name {
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .author-role {
+    font-size: 14px;
+    color: var(--text-gray);
+  }
+.pricing {
+    padding: 120px 0;
+  }
+  .pricing-header {
+    margin-bottom: 40px;
+  }
+  .pricing-header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .pricing-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+  .pricing-main-title {
+    font-size: 64px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .pricing-subtitle {
+    font-size: 18px;
+    color: var(--text-gray);
+    text-decoration: underline;
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  .pricing-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .pricing-card {
+    flex: 1;
+    max-width: 870px;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+  }
+  .pricing-card.basic {
+    background: #ffffff;
+  }
+  .pricing-card.pro {
+    background: var(--bg-darker);
+    color: #ffffff;
+  }
+  .badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: var(--primary-orange);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .plan-name {
+    font-size: 24px;
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .pricing-card.basic .plan-name { color: var(--text-dark); }
+  .pricing-card.pro .plan-name { color: #ffffff; }
+  
+  .plan-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 30px;
+  }
+  .price-value {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .pricing-card.basic .price-value { color: var(--primary-green); }
+  .pricing-card.pro .price-value { color: var(--primary-orange); }
+  
+  .price-period {
+    font-size: 32px;
+    margin-left: 10px;
+  }
+  .pricing-card.basic .price-period { color: var(--text-dark); }
+  .pricing-card.pro .price-period { color: #ffffff; }
+  
+  .plan-desc {
+    font-size: 16px;
+    color: var(--text-gray);
+    margin: 0 0 40px;
+  }
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+  }
+  .pricing-card.basic .plan-features li { color: var(--primary-orange); }
+  .pricing-card.pro .plan-features li { color: var(--primary-green); }
+  
+  .btn-full {
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+  }
+.cta {
+    background: var(--bg-darker);
+    padding: 120px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  .cta-pretitle {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+  }
+  .cta-title {
+    font-size: 72px;
+    margin: 0 0 30px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .cta-desc {
+    font-size: 20px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 auto 50px;
+    max-width: 600px;
+  }
+  .cta-btn {
+    padding: 25px 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .cta-platforms {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+.footer {
+    padding: 40px 0;
+    background: var(--bg-main);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copyright {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin: 0;
+  }
+
+@media (max-width: 1440px) {
+
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .pricing-main-title {
+    font-size: 52px;
+  }
+
+  .cta-title {
+    font-size: 60px;
+  }
+
+  .price-value {
+    font-size: 72px;
+  }
+
+}
+	  
+@media (max-width: 1194px) {
+
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .hero-inner {
+    gap: 30px;
+  }
+
+  .step-number {
+    font-size: 80px;
+  }
+
+  .pricing-main-title {
+    font-size: 44px;
+  }
+
+  .cta-title {
+    font-size: 52px;
+  }
+
+}
+	  
+@media (max-width: 834px) {
+  .nav {
+    display: none !important;
+  }
+
+  .header {
+    padding: 24px 0;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-actions {
+    gap: 20px;
+  }
+
+  .login-link {
+    display: block;
+  }
+
+  .header-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  .hero {
+    padding: 50px 0 80px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .steps-grid::before,
+  .steps-grid::after {
+    display: none;
+  }
+
+  .step-card {
+    padding: 50px 0;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-item:nth-child(2n) {
+    border-right: none;
+  }
+	
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    min-width: 320px;
+    flex-shrink: 0;
+  }
+  .pricing-cards {
+    flex-direction: row;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .nav {
+    display: none !important;
+  }
+
+  .header {
+    padding: 16px 0;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .login-link {
+    display: block;
+    font-size: 12px;
+  }
+
+  .header-btn {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+	.stats {
+		font-size: 12px;
+	}
+  .hero {
+    padding: 40px 0 60px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-image img {
+    max-width: 260px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid::before,
+  .steps-grid::after {
+    display: none;
+  }
+
+  .step-number {
+    font-size: 72px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    border-right: none;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    min-width: 260px;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+
+  .price-value {
+    font-size: 56px;
+  }
+
+  .cta-title {
+    font-size: 30px;
+	}
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header">
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="images/8db9792cf351b2d48c44fcea2a02b40659099e65.png" alt="Tempus Logo">
+        <span>Tempus</span>
+      </a>
+      <nav class="nav">
+        <a href="#section-features">Возможности</a>
+        <a href="#section-pricing">Тарифы</a>
+        <a href="#section-testimonials">Отзывы</a>
+        <a href="#section-footer">О нас</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="login-link">Войти</a>
+        <a href="#" class="btn btn-primary header-btn">Попробовать бесплатно</a>
+      </div>
+    </div>
+  </header>
+</section>
+<section id="section-hero">
+  <div class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Ваше время<br>
+          <span class="text-orange">Ваши правила</span><br>
+          Никакого хаоса
+        </h1>
+        <p class="hero-desc">
+          Tempus — это минималистичное приложение тайм-менеджмента для фрилансеров, которые мыслят в потоке, а не в рамках расписания. Планируйте свой день так, как удобно вам.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary hero-btn">Попробовать бесплатно</a>
+          <a href="#section-how-it-works" class="how-it-works-link">
+            <span>Как это работает</span>
+            <div class="how-it-works-graphics">
+              <img src="images/2819_379.svg" alt="line" class="hw-line">
+              <img src="images/2819_378.svg" alt="arrow" class="hw-arrow">
+              <!--merged image-->
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/37e32234a6049a6d7f76719ff8c7a5c3ac011a7c.png" alt="Tempus App Interface">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-how-it-works">
+  <div class="how-it-works">
+    <div class="container">
+      <div class="section-header hw-header">
+        <div class="title-wrapper">
+          <img src="images/2819_383.svg" alt="line">
+          <h2 class="text-orange">Как работает</h2>
+        </div>
+        <p class="stats">Более 2400+ пользователей уже используют Tempus</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">01</span>
+            <img src="images/2819_399.svg" alt="icon" class="step-icon">
+          </div>
+          <h3 class="step-title">Настройте свой день</h3>
+          <p class="step-desc">Открывайте Tempus каждое утро. Следите и настраивайте свои задачи, определяйте по важности дедлайны</p>
+        </div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">02</span>
+            <img src="images/2819_402.svg" alt="icon" class="step-icon">
+          </div>
+          <h3 class="step-title">Работайте в потоке</h3>
+          <p class="step-desc">Используйте удобный фокус-режим, чтобы сконцентрироваться на особо важных задачах и следить за своей нагрузкой с помощью дальнейшей аналитики</p>
+        </div>
+        <div class="step-card">
+          <div class="step-header">
+            <span class="step-number">03</span>
+            <img src="images/2819_405.svg" alt="icon" class="step-icon">
+          </div>
+          <h3 class="step-title">Совершенствуйтесь</h3>
+          <p class="step-desc">Следите за персональной аналитикой загруженности и прогресса, чтобы улучшать свою работоспособность и находить слабые места</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-features">
+  <div class="features">
+    <div class="container">
+      <div class="features-header">
+        <div class="title-wrapper">
+          <img src="images/2819_497.svg" alt="line">
+          <h2>Все, в чем вы нуждаетесь</h2>
+        </div>
+      </div>
+      <div class="features-box">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">01</span>
+              <img src="images/2819_414.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Задачи</h3>
+            <p class="feature-desc">Удобный интерфейс со всеми вашими задачами, распределённые по приоритетности и с широкой кастомизацией</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">02</span>
+              <img src="images/2819_402.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Фокус-режим</h3>
+            <p class="feature-desc">Минималистичный таймер для вашего рабочего потока, который удобно настроить под свои нужды</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">03</span>
+              <img src="images/2819_434.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Календарь</h3>
+            <p class="feature-desc">Все ваши встречи, ближайшие события и задачи в одном месте</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">04</span>
+              <img src="images/2819_405.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Статистика</h3>
+            <p class="feature-desc">Подробная аналитика вашего рабочего состояния и выполненных задач в нескольких вариациях</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">05</span>
+              <img src="images/2819_427.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Привычки</h3>
+            <p class="feature-desc">Отслеживать ваши привычки теперь стало ещё проще. Введите любую цель и наблюдайте за тем, как становитесь к ней ближе с каждым днём</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-header">
+              <span class="feature-number">06</span>
+              <img src="images/2819_431.svg" alt="icon" class="feature-icon">
+            </div>
+            <h3 class="feature-title">Интеграции</h3>
+            <p class="feature-desc">Привяжите аккаунты любимых треккеров и календарей, чтобы вся важная информация всегда была под рукой</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-testimonials">
+  <div class="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="title-wrapper">
+          <img src="images/2819_397.svg" alt="line">
+          <h2>Отзывы наших пользователей</h2>
+        </div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">“ Я просто балдею честно говоря. Ничего лучше этого ещё не попадалось мне в работе. Выражаю огромный респект и свэг создателям этого приложения и всем советую зарегистрироваться! Кто так не сделает — тот глупый дурак и тухлое яйцо. Меня зовут Вася Пупкин:) „</p>
+          <div class="testimonial-author">
+            <img src="images/2819_435.svg" alt="avatar" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Вася Пупкин</span>
+              <span class="author-role">Такойтотакойто</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">“ Я просто балдею честно говоря. Ничего лучше этого ещё не попадалось мне в работе. Выражаю огромный респект и свэг создателям этого приложения и всем советую зарегистрироваться! Кто так не сделает — тот глупый дурак и тухлое яйцо. Меня зовут Вася Пупкин:) „</p>
+          <div class="testimonial-author">
+            <img src="images/2819_442.svg" alt="avatar" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Вася Пупкин</span>
+              <span class="author-role">Такойтотакойто</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">“ Я просто балдею честно говоря. Ничего лучше этого ещё не попадалось мне в работе. Выражаю огромный респект и свэг создателям этого приложения и всем советую зарегистрироваться! Кто так не сделает — тот глупый дурак и тухлое яйцо. Меня зовут Вася Пупкин:) „</p>
+          <div class="testimonial-author">
+            <img src="images/2819_449.svg" alt="avatar" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Вася Пупкин</span>
+              <span class="author-role">Такойтотакойто</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-pricing">
+  <div class="pricing">
+    <div class="container">
+      <div class="pricing-header">
+        <div class="title-wrapper">
+          <img src="images/2819_495.svg" alt="line">
+          <h2>Тарифы</h2>
+        </div>
+      </div>
+      <div class="pricing-header-content">
+        <h2 class="pricing-main-title">Просто. <span class="text-orange">Честно.</span> Без фокусов</h2>
+        <p class="pricing-subtitle">Можно отменить в любой момент</p>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card basic">
+          <h3 class="plan-name">BASIC</h3>
+          <div class="plan-price"><span class="price-value">0₽</span><span class="price-period">/мес</span></div>
+          <p class="plan-desc">Навсегда бесплатно. Не требуются платежные данные</p>
+          <ul class="plan-features">
+            <li><img src="images/2819_460.svg" alt="check"> 5 проектов</li>
+            <li><img src="images/2819_461.svg" alt="check"> Базовая аналитика</li>
+            <li><img src="images/2819_463.svg" alt="check"> 3 часа фокус-режима</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-full">Выбрать тариф</a>
+        </div>
+        <div class="pricing-card pro">
+          <div class="badge">ХИТ</div>
+          <h3 class="plan-name">PRO</h3>
+          <div class="plan-price"><span class="price-value">500₽</span><span class="price-period">/мес</span></div>
+          <ul class="plan-features">
+            <li><img src="images/2819_473.svg" alt="check"> Безлимитные проекты</li>
+            <li><img src="images/2819_474.svg" alt="check"> Базовая аналитика</li>
+            <li><img src="images/2819_476.svg" alt="check"> 5 часов фокус-режима</li>
+            <li><img src="images/2819_478.svg" alt="check"> Больше функций</li>
+          </ul>
+          <a href="#" class="btn btn-orange btn-full">Попробовать бесплатно на 14 дней</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-cta">
+  <div class="cta">
+    <div class="container cta-inner">
+      <p class="cta-pretitle">ГОТОВЫ ВЗЯТЬ В РУКИ СВОЕ ВРЕМЯ?</p>
+      <h2 class="cta-title">Начните свою первую неделю<br><span class="text-green">Бесплатно</span></h2>
+      <p class="cta-desc">Никаких платежных данных. Просто скачайте,<br>настройте свой день и почувствуйте разницу.</p>
+      <a href="#" class="btn btn-orange cta-btn">Попробуйте Tempus бесплатно</a>
+      <p class="cta-platforms">Доступно на Windows, IOS и Android</p>
+    </div>
+  </div>
+</section>
+<section id="section-footer">
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="logo">
+        <img src="images/8db9792cf351b2d48c44fcea2a02b40659099e65.png" alt="Tempus Logo">
+        <span>Tempus</span>
+      </a>
+      <p class="copyright">© Булашева Владислава. Все права защищены</p>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

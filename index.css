@@ -1,0 +1,85 @@
+:root {
+  --primary-orange: #fe6333;
+  --primary-blue: #7191f6;
+  --primary-green: #14af87;
+  --text-dark: #000000;
+  --text-gray: #242424;
+  --text-light: #ffffff;
+  --text-muted: #d7d7d7;
+  --bg-main: #e2e7ee;
+  --bg-dark: #222222;
+  --bg-darker: #242424;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+}
+
+.text-orange { color: var(--primary-orange); }
+.text-green { color: var(--primary-green); }
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+@media (max-width: 1194px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 834px) {
+	.container {
+		padding: 0 32px;
+	}
+}
+
+@media (max-width: 375px) {
+
+  .container {
+    padding: 0 20px;
+  }
